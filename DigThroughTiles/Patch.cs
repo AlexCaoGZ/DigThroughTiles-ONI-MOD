@@ -7,7 +7,7 @@ namespace DigThroughTiles
     public class Patch
     {
         [HarmonyPatch(typeof(DigTool), "PlaceDig")]
-        public class DigTool_PlaceDig_Patch
+        public class DigThroughTilesPatch
         {
             public static bool Prefix(int cell, int animationDelay, ref GameObject __result)
             {
