@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using KMod;
 using System;
 using UnityEngine;
 
@@ -6,6 +7,15 @@ namespace DigThroughTiles
 {
     public class Patch
     {
+        public class PinYinSearchMod : UserMod2
+        {
+            public override void OnLoad(Harmony harmony)
+            {
+                base.OnLoad(harmony);
+                Debug.Log("[DigThroughTiles] Dig Through Tiles Mod Loadad.");
+            }
+        }
+
         [HarmonyPatch(typeof(DigTool), "PlaceDig")]
         public class DigThroughTilesPatch
         {
